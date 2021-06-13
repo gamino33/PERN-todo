@@ -1,9 +1,10 @@
-import * as DB from "./dbKey";
-import * as pg from 'pg'
-const { Pool } = pg;
+import * as DB from "./dbKey.js";
+// import * as pg from 'pg'
+// const { Pool } = pg;
 
+import pg from "pg";
 
-const pool = new Pool({
+const pool = new pg.Pool({
     user: DB.USER,
     password: DB.PASSWORD,
     host: DB.HOST,
@@ -12,3 +13,4 @@ const pool = new Pool({
 });
 
 export default pool;
+// module.exports = pool;
